@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="addSearchContainer">
+      <div id="bookInputForm">
+        <h2>Add The Book</h2>
+        <form id="form" class="form-style">
+          <div class="input-div-style">
+            <label for="bookInput">Enter Title:</label>
+            <input type="text" id="bookInput" name="bname" required />
+          </div>
+          <div class="input-div-style">
+            <label for="authorInput">Enter Author Name:</label>
+            <input type="text" id="authorInput" name="lname" required />
+          </div>
+          <div class="input-div-style">
+            <label for="genreInput">Choose Genre:</label>
+            <select id="genreInput" required>
+              <option value="Fiction">Fiction</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="AdventureAction">Adventure-Action</option>
+              <option value="SpeculativeFiction">Speculative-Fiction</option>
+              <option value="PoetryDrama">Poetry Drama</option>
+              <option value="WarMilitaryFiction">
+                War And Military Fiction
+              </option>
+              <option value="Philosophy">Philosophy</option>
+              <option value="Psychology">Psychology</option>
+            </select>
+          </div>
+
+          <div class="input-div-style">
+            <label for="bookYear">Published Year:</label>
+            <input
+              type="number"
+              id="bookYear"
+              min="1700"
+              max="2025"
+              step="1"
+              placeholder="YYYY"
+              required
+            />
+          </div>
+          <div style="align-self: center; margin-top: 20px">
+            <input value="ADD BOOK" type="submit" style="width: 90px" />
+          </div>
+        </form>
+      </div>
+      <div class="line"></div>
+      <div id="bookSearchContainer">
+        <h2 style="margin-top: 70px">Search Book From Your Library</h2>
+        <div>
+          <label for="searchInput"
+            >Search By Title, Author Name, Genre, Published Year:
+          </label>
+          <input
+            type="search"
+            name="search"
+            id="searchInput"
+            placeholder="Ex: Psychology,Title,1997...."
+            style="
+              width: 200px;
+              border-radius: 2px;
+              height: 30px;
+              padding-left: 0.3cm;
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <div id="displaySection">
+      <div id="sortFilter" class="sort-filter-style">
+        <div>
+          <label for="filterInput">Filter By Genre</label>
+          <select id="filterInput">
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="AdventureAction">Adventure-Action</option>
+            <option value="SpeculativeFiction">Speculative-Fiction</option>
+            <option value="PoetryDrama">Poetry Drama</option>
+            <option value="WarMilitaryFiction">War And Military Fiction</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Psychology">Psychology</option>
+          </select>
+        </div>
+        <div>
+          <label for="sortInput">Sort By</label>
+          <select id="sortInput">
+            <option value="year">Year</option>
+            <option value="alphabetical">Alphabetically</option>
+          </select>
+        </div>
+      </div>
+      <div id="displayBookSection"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
