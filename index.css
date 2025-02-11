@@ -78,3 +78,7 @@ input {
   align-content: flex-end;
   width: 61%;
 }
+
+.dragging {
+  opacity: 0.5;
+}
